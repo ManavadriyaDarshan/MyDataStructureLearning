@@ -27,6 +27,18 @@ public class LinkedList {
         }
     }
 
+    public void display(){
+        Node current = head;
+        if(head == null){
+            System.out.println("List is empty");
+        }
+        System.out.print("Nodes: ");
+        while (current != null){
+            System.out.print(current.data +" -> ");
+            current = current.next;
+        }
+    }
+
     public static void main(String[] args) {
         LinkedList list1 = new LinkedList();
 
@@ -35,5 +47,7 @@ public class LinkedList {
         list1.add(3);
         list1.add(4);
         list1.add(5);
+
+        list1.display();
     }
 }
